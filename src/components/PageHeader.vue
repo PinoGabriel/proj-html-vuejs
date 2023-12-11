@@ -86,10 +86,6 @@ export default {
         justify-content: space-between;
         align-items: center;
 
-        .w-35 {
-            width: 35%;
-        }
-
         .title {
             font-size: 3.6rem;
         }
@@ -122,6 +118,12 @@ a {
     border-radius: 50px;
 }
 
+.btnSignIn:hover {
+    background: rgb(192, 46, 110);
+    background: linear-gradient(90deg, rgba(192, 46, 110, 1) 0%, rgba(241, 92, 108, 1) 100%);
+    box-shadow: 0px 0px 50px 0px rgba(255, 255, 255, 0.1);
+}
+
 .btnGeneric {
     padding: 1rem 3rem;
     border-radius: 50px;
@@ -132,8 +134,20 @@ a {
     background: linear-gradient(90deg, rgba(8, 147, 195, 1) 0%, rgba(27, 77, 142, 1) 100%);
 }
 
+.btnBlue:hover {
+    background: rgb(192, 46, 110);
+    background: linear-gradient(90deg, rgba(192, 46, 110, 1) 0%, rgba(241, 92, 108, 1) 100%);
+    box-shadow: 0px 0px 50px 0px rgba(255, 255, 255, 0.1);
+}
+
 .btnRed {
     background: rgb(192, 46, 110);
     background: linear-gradient(90deg, rgba(192, 46, 110, 1) 0%, rgba(241, 92, 108, 1) 100%);
+}
+
+.btnRed:hover {
+    background: rgb(8, 147, 195);
+    background: linear-gradient(90deg, rgba(8, 147, 195, 1) 0%, rgba(27, 77, 142, 1) 100%);
+    box-shadow: 0px 0px 50px 0px rgba(255, 255, 255, 0.1);
 }
 </style>

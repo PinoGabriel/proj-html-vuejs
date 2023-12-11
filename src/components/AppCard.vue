@@ -31,6 +31,7 @@ export default {
     border-radius: 40px;
     color: black;
     transition: linear 0.3s;
+    margin: 16rem 0 10rem 0;
 }
 
 .cards:hover {
@@ -41,11 +42,14 @@ export default {
 
 img {
     position: absolute;
-    top: -120px;
-    left: 40px;
-    padding: 20px;
+    top: -30%;
+    left: 17%;
+    padding: 40px;
     border-radius: 40px;
     transition: linear 0.3s;
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
 }
 
 .cards:hover img {
