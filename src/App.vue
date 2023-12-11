@@ -1,0 +1,42 @@
+<script>
+import PageHeader from './components/PageHeader.vue'
+import PageMain from './components/PageMain.vue'
+import PageFooter from './components/PageFooter.vue'
+import { store } from './store.js'
+
+export default {
+	components: {
+		PageHeader,
+		PageMain,
+		PageFooter,
+	},
+	data() {
+		return {
+			store,
+		}
+	},
+	methods: {
+
+	}
+}
+</script>
+
+<template>
+	<header>
+		<PageHeader />
+	</header>
+	<main>
+		<PageMain />
+	</main>
+	<footer>
+		<PageFooter />
+	</footer>
+</template>
+
+<style lang="scss">
+@use './styles/general.scss';
+</style>
+
+<style scoped lang="scss">
+@use './styles/partials/variables' as *;
+</style>
