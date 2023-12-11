@@ -25,5 +25,32 @@ export const store = reactive({
             title: "Branding Strategy",
             subtitle: "When, While the lovely valley teems with vapour around meand the meridian sun strikes the upper",
         }
+    ],
+    portfolio: [
+        {
+            img: "8wa60okr-1-790x576.jpg",
+            title: "Basket of Flower on table",
+            subtitle: "Branding Strategy",
+        },
+        {
+            img: "DRY-1-790x576.jpg",
+            title: "Purinky Products",
+            subtitle: "Digital Experience",
+        },
+        {
+            img: "a247b00b-3621-470f-b4b8-b3ac46f25907-1-790x576.jpg",
+            title: "Satisfy Poster",
+            subtitle: "Branding Strategy",
+        },
+        {
+            img: "84316050-0af0-49db-a53a-241d47ddad0e-2-790x576.jpg",
+            title: "Mock-upTemplate",
+            subtitle: "Ecommerce",
+        },
+        {
+            img: "a247b00b-3621-470f-b4b8-b3ac46f25907-1-790x576.jpg",
+            title: "Landing Page",
+            subtitle: "Digital Experience",
+        },
     ]
 });

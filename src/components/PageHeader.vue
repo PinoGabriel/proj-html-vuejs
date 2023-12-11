@@ -55,7 +55,7 @@ export default {
     color: $colorWhite;
 
     .container {
-        width: 1500px;
+        max-width: 1500px;
         margin: 0 auto;
         padding: 1.5rem 0;
         display: flex;
@@ -79,7 +79,7 @@ export default {
     }
 
     .conatinerJumbo {
-        width: 1500px;
+        max-width: 1500px;
         margin: 0 auto;
         padding: 1.5rem 0;
         display: flex;
