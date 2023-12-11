@@ -6,24 +6,24 @@ export const store = reactive({
     ],
     WWD: [
         {
-            img: "./assets/corporate-landing/images/Group-247.png",
+            img: "Group-247.png",
             title: "Data Analysis",
-            subtitle: "",
+            subtitle: "When, While the lovely valley teems with vapour around meand the meridian sun strikes the upper",
         },
         {
-            img: "",
+            img: "Group-567.png",
             title: "Seo Optimization",
-            subtitle: "",
+            subtitle: "When, While the lovely valley teems with vapour around meand the meridian sun strikes the upper",
         },
         {
-            img: "",
+            img: "Group-538.png",
             title: "Security Data",
-            subtitle: "",
+            subtitle: "When, While the lovely valley teems with vapour around meand the meridian sun strikes the upper",
         },
         {
-            img: "",
+            img: "Group-566.png",
             title: "Branding Strategy",
-            subtitle: "",
+            subtitle: "When, While the lovely valley teems with vapour around meand the meridian sun strikes the upper",
         }
     ]
 });

@@ -3,6 +3,9 @@ export default {
     name: "AppCard",
     props: ["cardElement"],
     methods: {
+        getImgPath(img) {
+            return new URL(`../assets/corporate-landing/images/${img}`, import.meta.url).href;
+        }
     }
 }
 </script>
@@ -10,9 +13,9 @@ export default {
 
 <template>
     <div class="cards">
-        <img :src="cardElement.img" alt="group">
+        <img :src="getImgPath(cardElement.img)" alt="group">
         <h2>{{ cardElement.title }}</h2>
-        <p>When, While the lovely valley teems with vapour around meand the meridian sun strikes the upper</p>
+        <p>{{ cardElement.subtitle }}</p>
         <i class="fa-solid fa-arrow-right"></i>
     </div>
 </template>
