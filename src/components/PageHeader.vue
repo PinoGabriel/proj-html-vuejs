@@ -23,6 +23,25 @@ export default {
                 <a class="btnSignIn" href="#"> Sign In</a>
             </div>
         </div>
+
+        <div class="conatinerJumbo">
+            <div class="w-35">
+                <h1 class="title">Business Planning</h1>
+                <div class="title">Digital Technology</div>
+                <h1 class="title">Modern Solution !</h1>
+
+                <p>When, while the lovely valley teems with vapour around meand the meridian sun strikes the upper surfaces.
+                </p>
+
+                <a class="btnGeneric btnRed" href="#">Try it Now</a>
+                <a class="btnGeneric btnBlue" href="#">Explore More</a>
+            </div>
+
+            <div>
+                <img src="../assets/corporate-landing/images/header.png" alt="header">
+            </div>
+
+        </div>
     </section>
 </template>
 
@@ -30,33 +49,69 @@ export default {
 @use '../styles/partials/variables' as *;
 
 .backgroundHeader {
-    background-color: $colorBg;
-    height: 100vh;
+    background: rgb(11, 24, 82);
+    background: linear-gradient(180deg, rgba(11, 24, 82, 1) 0%, rgba(3, 6, 54, 1) 100%);
+    min-height: 100vh;
     color: $colorWhite;
 
     .container {
         width: 1500px;
         margin: 0 auto;
-        padding: 2rem 0;
+        padding: 1.5rem 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        img {
+            height: 5rem;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 600;
+        }
+
+        a:nth-child(1) {
+            color: $colorRed;
+        }
+    }
+
+    .conatinerJumbo {
+        width: 1500px;
+        margin: 0 auto;
+        padding: 1.5rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .w-35 {
+            width: 35%;
+        }
+
+        .title {
+            font-size: 3.6rem;
+        }
+
+        p {
+            margin: 4rem 0;
+            color: $colorBlue;
+        }
+
+        a {
+            margin-right: 3rem;
+        }
+
+
     }
 }
 
-img {
-    height: 5rem;
-}
+
 
 a {
     color: white;
     text-decoration: none;
-    margin-left: 2rem;
-    font-size: 1rem;
-}
-
-a:nth-child(1) {
-    color: #F9636B;
 }
 
 .btnSignIn {
@@ -65,5 +120,20 @@ a:nth-child(1) {
     background: linear-gradient(90deg, rgba(8, 147, 195, 1) 0%, rgba(27, 77, 142, 1) 100%);
     padding: 0.7rem 1.5rem;
     border-radius: 50px;
+}
+
+.btnGeneric {
+    padding: 1rem 3rem;
+    border-radius: 50px;
+}
+
+.btnBlue {
+    background: rgb(8, 147, 195);
+    background: linear-gradient(90deg, rgba(8, 147, 195, 1) 0%, rgba(27, 77, 142, 1) 100%);
+}
+
+.btnRed {
+    background: rgb(192, 46, 110);
+    background: linear-gradient(90deg, rgba(192, 46, 110, 1) 0%, rgba(241, 92, 108, 1) 100%);
 }
 </style>
