@@ -3,13 +3,15 @@ import { store } from '../store.js'
 import AppCard from './AppCard.vue';
 import AppSliderCard from './AppSliderCard.vue';
 import AppCardPrice from './AppCardPrice.vue';
+import AppCardBlog from './AppCardBlog.vue';
 
 export default {
 	name: "PageMain",
 	components: {
 		AppCard,
 		AppSliderCard,
-		AppCardPrice
+		AppCardPrice,
+		AppCardBlog,
 	},
 	data() {
 		return {
@@ -73,13 +75,24 @@ export default {
 		</div>
 	</section>
 
-	<section class="PriceList">
+
+	<section class="priceList">
 		<p>Price List</p>
 		<h2>Our <span>Pricing</span></h2>
 		<p>When, while the lovely valley teems with vapour around meand the meridian sun <br> strikes the upper surfaces .
 		</p>
 		<div class="containerCardPrice">
 			<AppCardPrice v-for="element in store.priceList" :cardPriceProp="element" />
+		</div>
+	</section>
+
+	<section class="blog">
+		<p>Blog</p>
+		<h2>Latest <span>Posts</span></h2>
+		<p>When, while the lovely valley teems with vapour around meand the meridian sun <br> strikes the upper surfaces .
+		</p>
+		<div class="containerBlog">
+			<AppCardBlog v-for="element in store.blogPosts" :cardBlogProp="element" />
 		</div>
 	</section>
 </template>
@@ -256,11 +269,12 @@ export default {
 
 
 /***** PriceList *******/
-.PriceList {
+.priceList {
 	background: rgb(11, 24, 82);
 	background: linear-gradient(180deg, rgba(11, 24, 82, 1) 70%, rgba(255, 255, 255, 1) 30%);
 	text-align: center;
 	color: white;
+	margin-bottom: 10rem;
 
 	p:nth-child(1) {
 		color: $colorRed;
@@ -286,6 +300,39 @@ export default {
 		display: flex;
 		max-width: 1500px;
 		margin: 0 auto;
+	}
+
+
+}
+
+/***** Blog *******/
+.blog {
+	text-align: center;
+
+
+	p:nth-child(1) {
+		color: $colorRed;
+	}
+
+	h2 {
+		font-size: 3rem;
+		padding: 2rem 0;
+
+		span {
+			font-weight: 400
+		}
+
+		;
+	}
+
+	p:nth-child(3) {
+		padding-bottom: 1rem;
+	}
+
+	.containerBlog {
+		display: flex;
+		width: 1500px;
+		margin: 4rem auto;
 	}
 
 

@@ -69,5 +69,28 @@ export const store = reactive({
             title: "Supporting",
             subtitle: "Clients",
         },
+    ],
+    blogPosts: [
+        {
+            title: "April 21, 2019 &bull; by Paul",
+            subtitle: "Amazon gets CCI nod to acquire",
+            text: "When, while the lovely valley teems with vapour around me, and the meridian sun s .. ",
+            btn: "Read More",
+            class: "unique"
+        },
+        {
+            title: "April 21, 2019 &bull; by Paul",
+            subtitle: "Clearing Corporations get SEBI nod to invest in overnight funds",
+            text: "When, while the lovely valley teems with vapour around me, and the meridian sun s .. ",
+            btn: "Read More",
+            class: "normal"
+        },
+        {
+            title: "April 21, 2019 &bull; by Paul",
+            subtitle: "Shabnam Dhillion wife of RSSB chief Gurinder Dhillon, passes away in London",
+            text: "When, while the lovely valley teems with vapour around me, and the meridian sun s .. ",
+            btn: "Read More",
+            class: "normal"
+        },
     ]
 });

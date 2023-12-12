@@ -131,6 +131,7 @@ h3 {
     a:hover {
         background: rgb(8, 147, 195);
         background: linear-gradient(90deg, rgba(8, 147, 195, 1) 0%, rgba(27, 77, 142, 1) 100%);
+        box-shadow: 0px 0px 30px 5px rgba(8, 147, 195, 0.3);
     }
 }
 
