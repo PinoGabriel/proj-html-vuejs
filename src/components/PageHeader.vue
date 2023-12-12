@@ -16,7 +16,7 @@ export default {
     <section class="backgroundHeader">
         <div class="container">
             <div>
-                <img src="../assets/corporate-landing/images/logo.png" alt="img">
+                <img src="../assets/corporate-landing/images/white-logo-2.png" alt="img">
             </div>
             <div>
                 <a v-for="element in store.navbar" href="#">{{ element }}</a>
@@ -61,10 +61,6 @@ export default {
         display: flex;
         justify-content: space-between;
         align-items: center;
-
-        img {
-            height: 5rem;
-        }
 
         a {
             color: white;
