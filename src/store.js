@@ -92,5 +92,29 @@ export const store = reactive({
             btn: "Read More",
             class: "normal"
         },
-    ]
+    ],
+    testimonial: [
+        {
+            img: "szabo-viktor-1266895-unsplash-1024x1024.png",
+            vote: "3",
+            name: "Michkel Anegl",
+            text: "When, While the lovely valley teems with vapour around meand the meridian sun strikes the upper impenetrable foilage of my trees, and but a thousand.",
+            work: "Marketing Management"
+        },
+        {
+            img: "philipe-cavalcante-539505-unsplash-1024x1024.png",
+            vote: "3",
+            name: "Michkel Anegl",
+            text: "When, While the lovely valley teems with vapour around meand the meridian sun strikes the upper impenetrable foilage of my trees, and but a thousand.",
+            work: "Marketing Management"
+        },
+        {
+            img: "fabio-spinelli-695744-unsplash-1024x1024.png",
+            vote: "3",
+            name: "Michkel Anegl",
+            text: "When, While the lovely valley teems with vapour around meand the meridian sun strikes the upper impenetrable foilage of my trees, and but a thousand.",
+            work: "Marketing Management"
+        },
+    ],
+    loghi: ["client-1-1.png", "clienty-2.png", "clienty-4.png", "client-5.png", "clienty-3.png"],
 });

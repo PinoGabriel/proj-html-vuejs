@@ -4,6 +4,9 @@ import AppCard from './AppCard.vue';
 import AppSliderCard from './AppSliderCard.vue';
 import AppCardPrice from './AppCardPrice.vue';
 import AppCardBlog from './AppCardBlog.vue';
+import AppCardTestimonial from './AppCardTestimonial.vue';
+import AppCardLogo from './AppCardLogo.vue';
+
 
 export default {
 	name: "PageMain",
@@ -12,6 +15,8 @@ export default {
 		AppSliderCard,
 		AppCardPrice,
 		AppCardBlog,
+		AppCardTestimonial,
+		AppCardLogo
 	},
 	data() {
 		return {
@@ -93,6 +98,19 @@ export default {
 		</p>
 		<div class="containerBlog">
 			<AppCardBlog v-for="element in store.blogPosts" :cardBlogProp="element" />
+		</div>
+	</section>
+
+	<section class="Testimonial">
+		<p>Testimonial</p>
+		<h2>What <span>People Say</span></h2>
+		<p>When, While the lovely valley teems with vapour around meand the meridian sun strikes the upper surfaces .</p>
+		<div class="container">
+			<AppCardTestimonial v-for="element in store.testimonial" :cardElement="element" />
+		</div>
+
+		<div class="container">
+			<AppCardLogo v-for="element in store.loghi" :cardElement="element" />
 		</div>
 	</section>
 </template>
@@ -336,6 +354,24 @@ export default {
 	}
 
 
+}
+
+.Testimonial {
+	text-align: center;
+
+	p:nth-child(1) {
+		color: $colorRed;
+		padding-top: 2rem;
+	}
+
+	h2 {
+		margin: 1rem 0;
+		font-size: 3rem;
+	}
+
+	span {
+		font-weight: 400;
+	}
 }
 
 
