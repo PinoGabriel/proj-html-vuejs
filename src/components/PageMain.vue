@@ -356,6 +356,8 @@ export default {
 
 }
 
+/***** Testimonial *******/
+
 .Testimonial {
 	text-align: center;
 
@@ -372,33 +374,5 @@ export default {
 	span {
 		font-weight: 400;
 	}
-}
-
-
-
-
-/****** GENERICHE *****/
-.btnGeneric {
-	padding: 1rem 3rem;
-	border-radius: 50px;
-	text-decoration: none;
-	color: white;
-}
-
-.btnBlue {
-	background: rgb(8, 147, 195);
-	background: linear-gradient(90deg, rgba(8, 147, 195, 1) 0%, rgba(27, 77, 142, 1) 100%);
-
-}
-
-.btnRed {
-	background: rgb(192, 46, 110);
-	background: linear-gradient(90deg, rgba(192, 46, 110, 1) 0%, rgba(241, 92, 108, 1) 100%);
-}
-
-.container {
-	max-width: 1500px;
-	display: flex;
-	margin: 0 auto;
 }
 </style>
