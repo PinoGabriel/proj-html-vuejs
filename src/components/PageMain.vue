@@ -2,12 +2,14 @@
 import { store } from '../store.js'
 import AppCard from './AppCard.vue';
 import AppSliderCard from './AppSliderCard.vue';
+import AppCardPrice from './AppCardPrice.vue';
 
 export default {
 	name: "PageMain",
 	components: {
 		AppCard,
-		AppSliderCard
+		AppSliderCard,
+		AppCardPrice
 	},
 	data() {
 		return {
@@ -61,6 +63,23 @@ export default {
 		</div>
 		<div class="containerSlider">
 			<AppSliderCard v-for="element in store.portfolio" :sliderProp="element" />
+		</div>
+		<div class="bullet">
+			<div class="bulletRed"></div>
+			<div class="bulletGrey"></div>
+			<div class="bulletGrey"></div>
+			<div class="bulletGrey"></div>
+			<div class="bulletGrey"></div>
+		</div>
+	</section>
+
+	<section class="PriceList">
+		<p>Price List</p>
+		<h2>Our <span>Pricing</span></h2>
+		<p>When, while the lovely valley teems with vapour around meand the meridian sun <br> strikes the upper surfaces .
+		</p>
+		<div class="containerCardPrice">
+			<AppCardPrice v-for="element in store.priceList" :cardPriceProp="element" />
 		</div>
 	</section>
 </template>
@@ -146,13 +165,13 @@ export default {
 	.btnBlue:hover {
 		background: rgb(192, 46, 110);
 		background: linear-gradient(90deg, rgba(192, 46, 110, 1) 0%, rgba(241, 92, 108, 1) 100%);
-		box-shadow: 0px 0px 50px 0px rgba(255, 255, 255, 0.1);
+		box-shadow: 0px 0px 50px 20px rgba(255, 255, 255, 0.1);
 	}
 
 	.btnRed:hover {
 		background: rgb(8, 147, 195);
 		background: linear-gradient(90deg, rgba(8, 147, 195, 1) 0%, rgba(27, 77, 142, 1) 100%);
-		box-shadow: 0px 0px 50px 0px rgba(255, 255, 255, 0.1);
+		box-shadow: 0px 0px 50px 20px rgba(255, 255, 255, 0.1);
 	}
 }
 
@@ -161,6 +180,7 @@ export default {
 
 .portfolio {
 	margin: 5rem auto;
+	overflow-x: hidden;
 
 	.title {
 		max-width: 1500px;
@@ -190,6 +210,12 @@ export default {
 			border-radius: 50%;
 			cursor: pointer;
 		}
+
+		i:hover {
+			background: rgb(192, 46, 110);
+			background: linear-gradient(90deg, rgba(192, 46, 110, 1) 0%, rgba(241, 92, 108, 1) 100%);
+			color: white;
+		}
 	}
 
 	.containerSlider {
@@ -198,7 +224,71 @@ export default {
 		max-width: 1500px;
 		flex-wrap: nowrap;
 		justify-content: space-between;
+		overflow: visible;
 	}
+
+	.bullet {
+		max-width: 1500px;
+		margin: 0 auto;
+		justify-content: center;
+		display: flex;
+
+		.bulletRed {
+			background: rgb(192, 46, 110);
+			background: linear-gradient(90deg, rgba(192, 46, 110, 1) 0%, rgba(241, 92, 108, 1) 100%);
+			height: 10px;
+			border-radius: 50%;
+			width: 10px;
+			margin-right: 0.4rem;
+			cursor: pointer;
+		}
+
+		.bulletGrey {
+			background-color: #E5E5EA;
+			height: 10px;
+			border-radius: 50%;
+			width: 10px;
+			margin: 0 0.4rem;
+			cursor: pointer;
+		}
+	}
+}
+
+
+/***** PriceList *******/
+.PriceList {
+	background: rgb(11, 24, 82);
+	background: linear-gradient(180deg, rgba(11, 24, 82, 1) 70%, rgba(255, 255, 255, 1) 30%);
+	text-align: center;
+	color: white;
+
+	p:nth-child(1) {
+		color: $colorRed;
+		padding-top: 5rem;
+	}
+
+	h2 {
+		font-size: 3rem;
+		padding: 2rem 0;
+
+		span {
+			font-weight: 400
+		}
+
+		;
+	}
+
+	p:nth-child(3) {
+		padding-bottom: 5rem;
+	}
+
+	.containerCardPrice {
+		display: flex;
+		width: 1500px;
+		margin: 0 auto;
+	}
+
+
 }
 
 

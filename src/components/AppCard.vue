@@ -42,8 +42,9 @@ export default {
 
 img {
     position: absolute;
-    top: -30%;
-    left: 17%;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     padding: 40px;
     border-radius: 40px;
     transition: linear 0.3s;
@@ -72,8 +73,9 @@ h2 {
     padding: 20px;
     border-radius: 50px;
     position: absolute;
-    left: 42%;
-    bottom: -5%;
+    left: 50%;
+    bottom: -12%;
+    transform: translate(-50%, -50%);
     transition: linear 0.3s;
     display: none;
 }

@@ -30,22 +30,32 @@ export default {
 
 .sliderCards {
     width: calc(100% / 3);
-    padding: 0 20px;
+    padding-right: 40px;
 }
 
 .bgCard {
-    background-color: white;
+    background: white;
     box-shadow: 0px 0px 17px -11px rgba(66, 68, 90, 1);
     max-height: 500px;
-    border-radius: 50px;
+    border-radius: 40px;
+    transition: background-color 0.5s ease;
+}
+
+.bgCard:hover {
+    background: rgb(192, 46, 110);
+    background: linear-gradient(90deg, rgba(192, 46, 110, 1) 0%, rgba(241, 92, 108, 1) 100%);
+}
+
+.bgCard:hover h2 {
+    color: white;
 }
 
 .underImg {
-    width: 350px;
+    width: 450px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    padding: 15px;
+    padding: 15px 40px;
 }
 
 p {
@@ -54,6 +64,6 @@ p {
 
 img {
     width: 100%;
-    border-radius: 50px;
+    border-radius: 40px;
 }
 </style>

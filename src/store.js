@@ -29,7 +29,7 @@ export const store = reactive({
     portfolio: [
         {
             img: "8wa60okr-1-790x576.jpg",
-            title: "Basket of Flower on table",
+            title: "Basket of Flowers on table",
             subtitle: "Branding Strategy",
         },
         {
@@ -51,6 +51,23 @@ export const store = reactive({
             img: "a247b00b-3621-470f-b4b8-b3ac46f25907-1-790x576.jpg",
             title: "Landing Page",
             subtitle: "Digital Experience",
+        },
+    ],
+    priceList: [
+        {
+            price: 40,
+            title: "Designing",
+            subtitle: "PROCESS",
+        },
+        {
+            price: 60,
+            title: "Developing",
+            subtitle: "PRODUCT",
+        },
+        {
+            price: 80,
+            title: "Supporting",
+            subtitle: "Clients",
         },
     ]
 });

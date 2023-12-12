@@ -121,7 +121,7 @@ a {
 .btnSignIn:hover {
     background: rgb(192, 46, 110);
     background: linear-gradient(90deg, rgba(192, 46, 110, 1) 0%, rgba(241, 92, 108, 1) 100%);
-    box-shadow: 0px 0px 50px 0px rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 50px 10px rgba(255, 255, 255, 0.1);
 }
 
 .btnGeneric {
@@ -137,7 +137,7 @@ a {
 .btnBlue:hover {
     background: rgb(192, 46, 110);
     background: linear-gradient(90deg, rgba(192, 46, 110, 1) 0%, rgba(241, 92, 108, 1) 100%);
-    box-shadow: 0px 0px 50px 0px rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 50px 10px rgba(255, 255, 255, 0.1);
 }
 
 .btnRed {
@@ -148,6 +148,6 @@ a {
 .btnRed:hover {
     background: rgb(8, 147, 195);
     background: linear-gradient(90deg, rgba(8, 147, 195, 1) 0%, rgba(27, 77, 142, 1) 100%);
-    box-shadow: 0px 0px 50px 0px rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 50px 10px rgba(255, 255, 255, 0.1);
 }
 </style>
