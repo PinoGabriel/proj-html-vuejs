@@ -51,7 +51,6 @@ export default {
 .cardPriceList {
     width: calc(100% / 3);
     background-color: white;
-    min-height: 500px;
     border-radius: 2rem;
     margin: 20px;
     color: black;
@@ -66,31 +65,6 @@ export default {
         font-size: 24rem;
         font-weight: 700;
         opacity: 0.1;
-    }
-}
-
-.cardPriceList:nth-child(2) {
-    background: rgb(192, 46, 110);
-    background: linear-gradient(90deg, rgba(192, 46, 110, 1) 0%, rgba(241, 92, 108, 1) 100%);
-    color: white;
-
-    .money {
-        color: white;
-    }
-
-    a {
-        text-decoration: none;
-        font-weight: 600;
-        color: $colorRed;
-        background: white;
-        margin: 0 auto;
-        padding: 1rem 2rem;
-        border-radius: 3rem;
-        box-shadow: 0px 0px 30px 5px rgba(192, 46, 110, 0.3);
-
-        i {
-            margin-left: 4rem;
-        }
     }
 }
 
@@ -152,6 +126,40 @@ h3 {
         i {
             margin-left: 4rem;
         }
+    }
+
+    a:hover {
+        background: rgb(8, 147, 195);
+        background: linear-gradient(90deg, rgba(8, 147, 195, 1) 0%, rgba(27, 77, 142, 1) 100%);
+    }
+}
+
+.cardPriceList:nth-child(2) {
+    background: rgb(192, 46, 110);
+    background: linear-gradient(90deg, rgba(192, 46, 110, 1) 0%, rgba(241, 92, 108, 1) 100%);
+    color: white;
+
+    .money {
+        color: white;
+    }
+
+    a {
+        text-decoration: none;
+        font-weight: 600;
+        color: $colorRed;
+        background: white;
+        margin: 0 auto;
+        padding: 1rem 2rem;
+        border-radius: 3rem;
+        box-shadow: 0px 0px 30px 5px rgba(192, 46, 110, 0.3);
+
+        i {
+            margin-left: 4rem;
+        }
+    }
+
+    a:hover {
+        background-color: white;
     }
 }
 </style>

@@ -284,7 +284,7 @@ export default {
 
 	.containerCardPrice {
 		display: flex;
-		width: 1500px;
+		max-width: 1500px;
 		margin: 0 auto;
 	}
 
