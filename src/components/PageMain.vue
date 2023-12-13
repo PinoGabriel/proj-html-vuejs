@@ -66,7 +66,7 @@ export default {
 </script>
 
 <template>
-	<section class="mainServices">
+	<section id="ourService" class="mainServices">
 		<p>Our Service</p>
 		<h2>What <span>We Do</span></h2>
 		<p>When, While the lovely valley teems with vapour around meand the</p>
@@ -128,7 +128,7 @@ export default {
 		</div>
 	</section>
 
-	<section class="blog">
+	<section id="ourBlog" class="blog">
 		<p>Blog</p>
 		<h2>Latest <span>Posts</span></h2>
 		<p>When, while the lovely valley teems with vapour around meand the meridian sun <br> strikes the upper surfaces .
