@@ -132,7 +132,7 @@ export default {
 		<h2>Latest <span>Posts</span></h2>
 		<p>When, while the lovely valley teems with vapour around meand the meridian sun <br> strikes the upper surfaces .
 		</p>
-		<div class="containerBlog">
+		<div class="container containerBlog">
 			<AppCardBlog v-for="element in store.blogPosts" :cardBlogProp="element" />
 		</div>
 	</section>
@@ -159,7 +159,6 @@ export default {
 
 /***** mainServices *******/
 .mainServices {
-	max-width: 1500px;
 	margin: 5rem auto;
 	text-align: center;
 
@@ -300,7 +299,6 @@ export default {
 
 
 	.bullet {
-		max-width: 1500px;
 		margin: 0 auto;
 		justify-content: center;
 		display: flex;
@@ -389,8 +387,6 @@ export default {
 	}
 
 	.containerBlog {
-		display: flex;
-		width: 1500px;
 		margin: 4rem auto;
 	}
 

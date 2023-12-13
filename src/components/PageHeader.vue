@@ -24,8 +24,8 @@ export default {
             </div>
         </div>
 
-        <div class="conatinerJumbo">
-            <div class="w-35">
+        <div class="container conatinerJumbo">
+            <div class="w-40">
                 <h1 class="title">Business Planning</h1>
                 <div class="title">Digital Technology</div>
                 <h1 class="title">Modern Solution !</h1>
@@ -37,7 +37,7 @@ export default {
                 <a class="btnGeneric btnBlue" href="#">Explore More</a>
             </div>
 
-            <div>
+            <div class="w-60">
                 <img src="../assets/corporate-landing/images/header.png" alt="header">
             </div>
 
@@ -55,10 +55,7 @@ export default {
     color: $colorWhite;
 
     .container {
-        max-width: 1500px;
-        margin: 0 auto;
         padding: 1.5rem 0;
-        display: flex;
         justify-content: space-between;
         align-items: center;
 
@@ -75,10 +72,7 @@ export default {
     }
 
     .conatinerJumbo {
-        max-width: 1500px;
-        margin: 0 auto;
         padding: 1.5rem 0;
-        display: flex;
         justify-content: space-between;
         align-items: center;
 
@@ -91,8 +85,9 @@ export default {
             color: $colorBlue;
         }
 
-        a {
+        .btnGeneric {
             margin-right: 3rem;
+            margin-left: 0;
         }
 
 

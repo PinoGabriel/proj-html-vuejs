@@ -37,6 +37,11 @@ export default {
 
 <style lang="scss">
 @use './styles/general.scss';
+@media screen and (max-width: 1290px) {
+	.container {
+		width: 1100px;
+	}
+}
 </style>
 
 <style scoped lang="scss">
