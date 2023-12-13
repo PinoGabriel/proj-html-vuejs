@@ -27,7 +27,7 @@ export default {
 	},
 	methods: {
 		// ... (gli altri metodi rimangono invariati)
-		aggiornaPosizioneSlider() {
+		newPositonSlider() {
 			const container = document.querySelector('.containerSlider');
 			const frecciaDestra = document.querySelector('.fa-arrow-right');
 
@@ -39,25 +39,25 @@ export default {
 				container.style.justifyContent = 'flex-end';
 			}
 		},
-		gestisciClickFrecciaDestra() {
+		manageArrowRight() {
 			if (this.sliderCounter < 2) {
 				this.sliderCounter++;
 				this.bulletCounter = this.sliderCounter;
-				this.aggiornaPosizioneSlider();
+				this.newPositonSlider();
 			}
 		},
-		gestisciClickFrecciaSinistra() {
+		manageArrowLeft() {
 			if (this.sliderCounter > 0) {
 				this.sliderCounter--;
 				this.bulletCounter = this.sliderCounter;
-				this.aggiornaPosizioneSlider();
+				this.newPositonSlider();
 			}
 		},
-		selezionaBullet(index) {
+		selectBullet(index) {
 			if (index < 3) {
 				this.bulletCounter = index;
 				this.sliderCounter = index; // Puoi cambiare questa logica a seconda dei tuoi requisiti
-				this.aggiornaPosizioneSlider();
+				this.newPositonSlider();
 			}
 		},
 	},
@@ -100,10 +100,10 @@ export default {
 				<h2>Latest <span>work</span></h2>
 			</div>
 			<div>
-				<i class="fa-solid fa-arrow-left" :class="{ 'frecciaDisabilitata': sliderCounter === 0 }"
-					@click="gestisciClickFrecciaSinistra"></i>
-				<i class="fa-solid fa-arrow-right" :class="{ 'frecciaDisabilitata': sliderCounter === 2 }"
-					@click="gestisciClickFrecciaDestra"></i>
+				<i class="fa-solid fa-arrow-left" :class="{ 'arrowDisabled': sliderCounter === 0 }"
+					@click="manageArrowLeft"></i>
+				<i class="fa-solid fa-arrow-right" :class="{ 'arrowDisabled': sliderCounter === 2 }"
+					@click="manageArrowRight"></i>
 			</div>
 		</div>
 		<div class="containerSlider">
@@ -112,7 +112,7 @@ export default {
 		<div class="bullet">
 			<div v-for="(bullet, index) in store.portfolio" :key="index"
 				:class="{ 'bulletRed': bulletCounter === index && index < 3, 'bulletGrey': bulletCounter !== index || index >= 3 }"
-				@click="selezionaBullet(index)"></div>
+				@click="selectBullet(index)"></div>
 		</div>
 	</section>
 
@@ -284,7 +284,7 @@ export default {
 			color: white;
 		}
 
-		.frecciaDisabilitata {
+		.arrowDisabled {
 			opacity: 0.5;
 		}
 	}
