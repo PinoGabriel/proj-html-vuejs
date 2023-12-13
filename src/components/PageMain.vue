@@ -1,6 +1,6 @@
 <script>
 import { store } from '../store.js'
-import AppCard from './AppCard.vue';
+import AppCardService from './AppCardService.vue';
 import AppSliderCard from './AppSliderCard.vue';
 import AppCardPrice from './AppCardPrice.vue';
 import AppCardBlog from './AppCardBlog.vue';
@@ -11,7 +11,7 @@ import AppCardLogo from './AppCardLogo.vue';
 export default {
 	name: "PageMain",
 	components: {
-		AppCard,
+		AppCardService,
 		AppSliderCard,
 		AppCardPrice,
 		AppCardBlog,
@@ -37,7 +37,6 @@ export default {
 				container.style.justifyContent = 'center';
 			} else if (this.sliderCounter === 2) {
 				container.style.justifyContent = 'flex-end';
-				frecciaDestra.style.display = 'none'; // Nascondi la freccia destra
 			}
 		},
 		gestisciClickFrecciaDestra() {
@@ -71,7 +70,7 @@ export default {
 		<h2>What <span>We Do</span></h2>
 		<p>When, While the lovely valley teems with vapour around meand the</p>
 		<div class="container">
-			<AppCard v-for="element in store.WWD" :cardElement="element" />
+			<AppCardService v-for="element in store.WWD" :cardElement="element" />
 		</div>
 		<a class="btnGeneric btnRed" href="#">View All Services</a>
 	</section>
@@ -287,7 +286,6 @@ export default {
 
 		.frecciaDisabilitata {
 			opacity: 0.5;
-			/* Puoi regolare l'opacità secondo le tue preferenze */
 		}
 	}
 

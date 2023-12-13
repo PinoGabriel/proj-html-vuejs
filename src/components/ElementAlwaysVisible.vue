@@ -34,19 +34,19 @@ export default {
 .demo {
     top: 44.5%;
     transform: translate(-50%, -50%);
-    transition: width 1s
+    transition: width 0.5s
 }
 
 .shop {
     top: 50%;
     transform: translate(-50%, -50%);
-    transition: width 1s
+    transition: width 0.5s
 }
 
 .export {
     top: 55.5%;
     transform: translate(-50%, -50%);
-    transition: width 1s
+    transition: width 0.5s
 }
 
 .demo:hover,
