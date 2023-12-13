@@ -2,8 +2,32 @@
 
 export default {
     name: "ElementAlwaysVisible",
+    data() {
+        return {
+            scrollPosition: 0,
+            showArrow: false,
+        }
+    },
+    mounted() {
+        window.addEventListener('scroll', this.handleScroll);
+    },
+    beforeDestroy() {
+        window.removeEventListener('scroll', this.handleScroll);
+    },
     methods: {
-
+        handleScroll() {
+            this.scrollPosition = window.scrollY || document.documentElement.scrollTop;
+            this.showArrow = this.scrollPosition >= 300;
+            this.applyTransitionClass();
+        },
+        applyTransitionClass() {
+            const body = document.body;
+            if (this.showArrow) {
+                body.classList.add('show-arrow');
+            } else {
+                body.classList.remove('show-arrow');
+            }
+        },
     }
 }
 </script>
@@ -18,13 +42,16 @@ export default {
         <p>Buy Now!</p>
     </div>
     <div class="general export">
-        <i class="fa-solid fa-bag-shopping"></i>
+        <i class="fa-solid fa-file-export"></i>
         <p>Export Section</p>
     </div>
 
     <div class="messageFixed">
         <i class="fa-regular fa-comment"></i>
     </div>
+
+    <a v-if="showArrow" class="ArrowUp" href="#">
+        <i class="fa-solid fa-arrow-up"></i></a>
 </template>
 
 
@@ -101,5 +128,45 @@ export default {
 
 .messageFixed:hover {
     background-color: rgba(82, 124, 235, 1);
+}
+
+.ArrowUp {
+    position: fixed;
+    z-index: 10;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border: 1px solid #3D3D3D;
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 50%;
+    right: 6%;
+    cursor: pointer;
+    animation: slideIn 0.5s ease forwards;
+
+
+    i {
+        font-size: 0.7rem;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        bottom: -10%;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 5%;
+        opacity: 1;
+    }
+}
+
+.ArrowUp:hover {
+    background-color: #3D3D3D;
+    color: white;
 }
 </style>

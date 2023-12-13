@@ -17,9 +17,6 @@ export default {
 			store,
 		}
 	},
-	methods: {
-
-	}
 }
 </script>
 
@@ -44,11 +41,4 @@ export default {
 
 <style scoped lang="scss">
 @use './styles/partials/variables' as *;
-
-p {
-	position: fixed;
-	top: 0;
-	z-index: 999;
-	color: white;
-}
 </style>
