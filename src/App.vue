@@ -2,6 +2,7 @@
 import PageHeader from './components/PageHeader.vue'
 import PageMain from './components/PageMain.vue'
 import PageFooter from './components/PageFooter.vue'
+import ElementAlwaysVisible from './components/ElementAlwaysVisible.vue'
 import { store } from './store.js'
 
 export default {
@@ -9,6 +10,7 @@ export default {
 		PageHeader,
 		PageMain,
 		PageFooter,
+		ElementAlwaysVisible,
 	},
 	data() {
 		return {
@@ -22,6 +24,9 @@ export default {
 </script>
 
 <template>
+	<div>
+		<ElementAlwaysVisible />
+	</div>
 	<header>
 		<PageHeader />
 	</header>
@@ -39,4 +44,11 @@ export default {
 
 <style scoped lang="scss">
 @use './styles/partials/variables' as *;
+
+p {
+	position: fixed;
+	top: 0;
+	z-index: 999;
+	color: white;
+}
 </style>
