@@ -14,7 +14,7 @@ export default {
 
 <template>
     <section class="backgroundFooter">
-        <div class="container bgContainerFooter">
+        <div class="container containerFooter">
             <div>
                 <h1>
                     We Offer Awesome Services
@@ -23,8 +23,11 @@ export default {
                     .</p>
             </div>
             <div class="positionRelative">
-                <input type="email" id="emails" placeholder="Enter Your Email Address" pattern=".+@example\.com" required>
-                <button class="subscribe">Subscribe</button>
+                <form>
+                    <input type="email" id="emails" name="email" placeholder="Enter Your Email Address" required
+                        pattern=".+@example\.com">
+                    <button type="submit" class="subscribe">Subscribe</button>
+                </form>
             </div>
         </div>
     </section>
@@ -41,7 +44,7 @@ export default {
     padding-top: 3rem;
 }
 
-.bgContainerFooter {
+.containerFooter {
     background: rgb(192, 46, 110);
     background: linear-gradient(90deg, rgba(192, 46, 110, 1) 0%, rgba(241, 92, 108, 1) 100%);
     min-height: 300px;
@@ -61,8 +64,6 @@ export default {
 
     div:nth-child(2) {
         width: 35%;
-        display: flex;
-        justify-content: end;
     }
 }
 
