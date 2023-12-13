@@ -33,7 +33,7 @@ export default {
     height: 500px;
     border-radius: 3rem;
     color: white;
-    padding: 3rem;
+    padding: 2rem;
     margin: 1rem;
     text-align: left;
     display: flex;
@@ -93,5 +93,10 @@ export default {
             border-radius: 3rem;
         }
     }
+}
+
+a:hover {
+    background: rgb(192, 46, 110);
+    background: linear-gradient(90deg, rgba(192, 46, 110, 1) 0%, rgba(241, 92, 108, 1) 100%);
 }
 </style>

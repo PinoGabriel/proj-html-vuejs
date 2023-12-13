@@ -20,12 +20,49 @@ export default {
 	},
 	data() {
 		return {
-			store
+			store,
+			sliderCounter: 0,
+			bulletCounter: 0,
 		}
 	},
 	methods: {
-	}
-}
+		// ... (gli altri metodi rimangono invariati)
+		aggiornaPosizioneSlider() {
+			const container = document.querySelector('.containerSlider');
+			const frecciaDestra = document.querySelector('.fa-arrow-right');
+
+			if (this.sliderCounter === 0) {
+				container.style.justifyContent = 'start';
+			} else if (this.sliderCounter === 1) {
+				container.style.justifyContent = 'center';
+			} else if (this.sliderCounter === 2) {
+				container.style.justifyContent = 'flex-end';
+				frecciaDestra.style.display = 'none'; // Nascondi la freccia destra
+			}
+		},
+		gestisciClickFrecciaDestra() {
+			if (this.sliderCounter < 2) {
+				this.sliderCounter++;
+				this.bulletCounter = this.sliderCounter;
+				this.aggiornaPosizioneSlider();
+			}
+		},
+		gestisciClickFrecciaSinistra() {
+			if (this.sliderCounter > 0) {
+				this.sliderCounter--;
+				this.bulletCounter = this.sliderCounter;
+				this.aggiornaPosizioneSlider();
+			}
+		},
+		selezionaBullet(index) {
+			if (index < 3) {
+				this.bulletCounter = index;
+				this.sliderCounter = index; // Puoi cambiare questa logica a seconda dei tuoi requisiti
+				this.aggiornaPosizioneSlider();
+			}
+		},
+	},
+};
 </script>
 
 <template>
@@ -64,19 +101,19 @@ export default {
 				<h2>Latest <span>work</span></h2>
 			</div>
 			<div>
-				<i class="fa-solid fa-arrow-left"></i>
-				<i class="fa-solid fa-arrow-right"></i>
+				<i class="fa-solid fa-arrow-left" :class="{ 'frecciaDisabilitata': sliderCounter === 0 }"
+					@click="gestisciClickFrecciaSinistra"></i>
+				<i class="fa-solid fa-arrow-right" :class="{ 'frecciaDisabilitata': sliderCounter === 2 }"
+					@click="gestisciClickFrecciaDestra"></i>
 			</div>
 		</div>
 		<div class="containerSlider">
 			<AppSliderCard v-for="element in store.portfolio" :sliderProp="element" />
 		</div>
 		<div class="bullet">
-			<div class="bulletRed"></div>
-			<div class="bulletGrey"></div>
-			<div class="bulletGrey"></div>
-			<div class="bulletGrey"></div>
-			<div class="bulletGrey"></div>
+			<div v-for="(bullet, index) in store.portfolio" :key="index"
+				:class="{ 'bulletRed': bulletCounter === index && index < 3, 'bulletGrey': bulletCounter !== index || index >= 3 }"
+				@click="selezionaBullet(index)"></div>
 		</div>
 	</section>
 
@@ -247,6 +284,11 @@ export default {
 			background: linear-gradient(90deg, rgba(192, 46, 110, 1) 0%, rgba(241, 92, 108, 1) 100%);
 			color: white;
 		}
+
+		.frecciaDisabilitata {
+			opacity: 0.5;
+			/* Puoi regolare l'opacità secondo le tue preferenze */
+		}
 	}
 
 	.containerSlider {
@@ -257,6 +299,7 @@ export default {
 		justify-content: space-between;
 		overflow: visible;
 	}
+
 
 	.bullet {
 		max-width: 1500px;
@@ -270,7 +313,7 @@ export default {
 			height: 10px;
 			border-radius: 50%;
 			width: 10px;
-			margin-right: 0.4rem;
+			margin: 0 0.4rem;
 			cursor: pointer;
 		}
 
