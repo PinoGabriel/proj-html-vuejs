@@ -169,4 +169,15 @@ export default {
     background-color: #3D3D3D;
     color: white;
 }
+
+
+@media screen and (max-width: 1290px) {
+    .general {
+        right: -16%;
+    }
+
+    .ArrowUp {
+        right: 8%;
+    }
+}
 </style>
