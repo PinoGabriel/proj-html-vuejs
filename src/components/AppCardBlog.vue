@@ -30,7 +30,7 @@ export default {
 .unique {
     background-image: url(/src/assets/corporate-landing/images/headway-537308-unsplash-1380x703.jpg);
     width: 48%;
-    height: 500px;
+    min-height: 500px;
     border-radius: 3rem;
     color: white;
     padding: 2rem;
@@ -65,7 +65,7 @@ export default {
 .normal {
     background: linear-gradient(180deg, rgba(11, 24, 82, 1) 0%, rgba(3, 6, 54, 1) 100%);
     width: 23%;
-    height: 500px;
+    min-height: 500px;
     border-radius: 3rem;
     color: white;
     padding: 3rem;
@@ -98,5 +98,28 @@ export default {
 a:hover {
     background: rgb(192, 46, 110);
     background: linear-gradient(90deg, rgba(192, 46, 110, 1) 0%, rgba(241, 92, 108, 1) 100%);
+}
+
+@media screen and (max-width: 1290px) {
+    .normal {
+        div {
+
+            a {
+                padding: 1rem 1.2rem;
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+    .unique {
+        div {
+
+            a {
+                padding: 1rem 1.2rem;
+                font-size: 0.8rem;
+                text-align: center;
+            }
+        }
+    }
 }
 </style>
